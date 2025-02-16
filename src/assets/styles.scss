@@ -1,0 +1,26 @@
+// Importa Bootstrap con variables personalizadas
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/bootstrap";
+
+body {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #b44cff, #2bb8ff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  button {
+    background-color: #6c48b5;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+  }  
