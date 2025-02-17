@@ -43,8 +43,8 @@ export default {
           ]
         },
         {
-          title: "Portafolio v1",
-          description: "Mi primer portafolio realizado solo con Bootstrap",
+          title: "Portfoleo v1",
+          description: "Mi primer portfoleo realizado solo con Bootstrap",
           img: "/img2.png",
           technologies: [
             { name: "Vue.js", icon: "fab fa-vuejs" },
