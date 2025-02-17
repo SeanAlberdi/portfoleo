@@ -36,33 +36,37 @@ export default {
 
 <style>
 body {
-  background-color: #202124; /* Fondo original */
+  background: linear-gradient(45deg, #202124, #2A2C34);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease-in-out infinite;
   color: white;
   margin: 0;
   font-family: 'Arial', sans-serif;
   position: relative;
-  overflow-x: hidden; /* Esto permitirá el scroll normal */
-  animation: backgroundShift 60s ease-in-out infinite; /* Movimiento suave del fondo */
-  font-size: 1.2rem; /* Aumentamos el tamaño de fuente general */
+  overflow-x: hidden;
+  font-size: 1.2rem;
 }
 
-/* Estilos para los botones */
+section {
+  position: relative;
+  z-index: 1;
+}
+
 button {
   background-color: #6A4C93 !important;
   color: white;
   border: none;
-  padding: 12px 25px; /* Aumentamos el tamaño de los botones */
+  padding: 12px 25px;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1; /* Asegura que el botón esté por encima del fondo */
-  font-size: 1.1rem; /* Tamaño de texto más grande en los botones */
+  z-index: 1;
+  font-size: 1.1rem;
 }
 
 button:hover {
   opacity: 0.9;
 }
 
-/* Estilos para la sección hero */
 .hero {
   position: relative;
   text-align: center;
@@ -71,39 +75,53 @@ button:hover {
 }
 
 .intro h1 {
-  font-size: 4rem !important; /* O el tamaño que desees */
+  font-size: 4rem !important;
   margin: 0;
 }
-
 
 .hero h1 span {
   color: #A389DA !important;
 }
 
 .hero h2 {
-  font-size: 2.5rem; /* Aumentamos el tamaño de h2 */
+  font-size: 2.5rem;
 }
 
 .hero p {
-  font-size: 1.5rem; /* Aumentamos el tamaño del texto */
+  font-size: 1.5rem;
   line-height: 1.6 !important;
 }
 
 .hero button {
   margin: 15px !important;
-  font-size: 1.2rem; /* Aumentamos el tamaño de texto en los botones */
+  font-size: 1.2rem;
 }
 
-/* Animación suave de desplazamiento en el fondo */
-@keyframes backgroundShift {
+@keyframes gradientShift {
   0% {
-    background-color: #202124;
+    background-position: 0% 50%;
   }
+
   50% {
-    background-color: #2A2C34; /* Un ligero cambio de color */
+    background-position: 100% 50%;
   }
+
   100% {
-    background-color: #202124;
+    background-position: 0% 50%;
   }
+}
+
+/* Añadiendo líneas estéticas */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"%3E%3Cpath fill="none" stroke="%23A389DA" stroke-width="2" d="M0 50 C 150 100, 200 200, 400 200 S 700 300, 800 500" /%3E%3C/svg%3E') repeat;
+  z-index: 0;
+  /* Esto coloca las líneas detrás del contenido */
+  pointer-events: none;
 }
 </style>

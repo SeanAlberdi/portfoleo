@@ -6,7 +6,7 @@
       <p class="title">Full Stack Developer.</p>
     </div>
     <div class="buttons">
-      <button @click="$emit('scrollToContact')">Contáctame</button>
+      <button @click="$emit('scrollToContact')">Contáctame  <i class="fa-regular fa-paper-plane"></i></button>
       <button @click="downloadCV">📥 Descargar CV</button>
     </div>
   </section>
@@ -18,8 +18,8 @@ export default {
     // Método para descargar el CV
     downloadCV() {
       const link = document.createElement("a");
-      link.href = "/cv.pdf";
-      link.download = "cv.pdf";
+      link.href = "/CV - Seán Alberdi.pdf";
+      link.download = "CV - Seán Alberdi.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -32,7 +32,7 @@ export default {
 .hero {
   position: relative;
   text-align: center;
-  padding: 370px 20px;
+  padding: 260px 20px;
   color: white;
   z-index: 1; /* Aseguramos que el contenido de la hero esté encima de cualquier fondo */
 }

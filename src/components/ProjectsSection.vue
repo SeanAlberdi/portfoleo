@@ -2,6 +2,7 @@
   <section id="projects" class="projects">
     <div class="container text-center">
       <h2>Mis proyectos</h2>
+      <hr class="line">
       <div class="row">
         <div class="col-md-4" v-for="(project, index) in projects" :key="index">
           <div class="project-card">
@@ -72,6 +73,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+section {
+  margin: 150px 20px;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  /* Aumentamos el tamaño del título */
+  font-weight: bold;
+  /* Ponemos el título en negrita */
+  margin-bottom: 20px;
+}
+
+
 .projects {
   color: white;
   padding: 50px;
@@ -83,6 +98,8 @@ export default {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 30px;
+  /* Para que las tarjetas no estén tan juntas */
 }
 
 .project-img {
@@ -101,14 +118,16 @@ export default {
 .tech-stack {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Esto hace que los íconos se acomoden en múltiples líneas si es necesario */
+  flex-wrap: wrap;
+  /* Esto hace que los íconos se acomoden en múltiples líneas si es necesario */
   gap: 15px;
   margin-top: 15px;
 }
 
 .tech-icon {
   font-size: 2rem;
-  color: #A389DA; /* Color para los íconos */
+  color: #A389DA;
+  /* Color para los íconos */
 }
 
 .tech-icon i {
@@ -116,6 +135,15 @@ export default {
 }
 
 .tech-icon i:hover {
-  transform: scale(1.2); /* Efecto de hover */
+  transform: scale(1.2);
+  /* Efecto de hover */
+}
+
+/* Línea estética debajo del título */
+.line {
+  border: 0;
+  height: 2px;
+  background: #A389DA;
+  margin: 20px 0;
 }
 </style>
