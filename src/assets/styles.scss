@@ -16,6 +16,18 @@ body {
     -webkit-background-clip: text;
     color: transparent;
   }
+
+  .hero h1,
+  .hero span,
+  .hero h2 {
+    display: inline !important;
+    margin: 0 ;
+    margin-bottom: 100px;
+  }
+
+  .hero > div {
+    margin-bottom: 100px;
+  }
   
   button {
     background-color: #6c48b5;
@@ -23,4 +35,5 @@ body {
     border-radius: 10px;
     font-size: 1.2rem;
     color: white;
-  }  
+    margin-inline: 16px;
+  }
